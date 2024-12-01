@@ -24,6 +24,8 @@ flex-direction: column;
 font-size: var(--font-size);
 font-family: var(--font-family);
 gap: 3rem;
+overflow-x: hidden;
+width: 100%;
 }
 header{
     display: flex;
@@ -61,16 +63,39 @@ header>ul>li>a{
     color: var(--neutral);
     padding: 1rem 3rem;
 }
-
+.nav_res{
+    display: flex;
+    justify-content: space-between;
+    display: none;
+    align-items: center;
+}
 .premium:hover{
     background-color: var(--secondary-color);
     transition: all .3s ease-in-out;
 }
+@media screen and (max-width:	640px) {
+    header{
+        display: none;
+        padding: 1rem 2rem;
+    }
+    .nav_res{
+        display: flex;
 
+    }
+    body{
+        overflow-x: hidden;
+    }
+    .nav_res_tree{
+        /* display: block; */
+    }
+}
 .heros{
     display: flex;
-    padding:0 2rem;
+    padding:0rem 2rem;
+    gap: 2rem;
     justify-content: space-between;
+    align-items: center;
+
 }
 .francis{
     flex: 2;
@@ -78,6 +103,7 @@ header>ul>li>a{
     border-radius: 1rem;
     display: flex;
     justify-content: center;
+    background-color: red;
 }
 .francis img{
     border-radius: 1rem;
@@ -118,4 +144,48 @@ header>ul>li>a{
 }
 .propose{
 flex: 1;
+display: flex;
+flex-direction: column;
+gap: 1rem;
+background-color: yellow;
+}
+.une_title{
+    display: flex;
+    align-items: center;
+}
+.une_title span{
+    background-color: var(--primary-color);
+    border-radius: 2rem;
+    padding: .9rem .2rem;
+}
+
+.description{
+    display: flex;
+    align-items: stretch;
+    gap: 1rem;
+    background-color: green;
+    flex: 1;
+}
+.description_txt{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+justify-content: space-between;
+background-color: red;
+
+.text_h{
+    font-size: 1.5rem;
+}
+.text{
+    font-size: .9rem;
+}
+
+}
+.com{
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    /* justify-content: space-evenly; */
+    height: 100%;
+    /* align-items: stretch; */
 }
